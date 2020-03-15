@@ -15,4 +15,7 @@ for number in number_array:
 t1 = time.time()
 print(f"Processing time is {t1-t0}")
 df = df[df['หน่วยงาน'].notna()]
+n = len(df['เลขหมาย'].unique())
+print(f"There are {n} numbers.")
+
 df.to_csv("4_digit.csv")
